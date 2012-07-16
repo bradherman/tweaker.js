@@ -65,7 +65,9 @@
         $(".finish").hide();
 
         $(".edit").live("click", function(){
-          $(".editable").tweaker();
+          $(".editable")each(function(){
+            $(this).tweaker();
+          });
           $(".edit").hide();
           $(".finish").show();
         });
