@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="Tweaker.js : tweaker is a super simple plugin for inline editing in your web app" />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" charset="utf-8"></script>
+    <script src="https://raw.github.com/bradherman/tweaker.js/master/tweaker.js" type="text/javascript"></script>
+    <script type="text/javascript">
+      $(function(){
+        $(".finish").hide();
+
+        $(".edit").live("click", function(){
+          $(".editable").tweaker();
+          $(".edit").hide();
+          $(".finish").show();
+        });
+
+        $(".finish").live("click", function(){
+          $(".editable").tweaker().destroy();
+          $(".edit").show();
+          $(".finish").hide();
+        });
+      });
+    </script>
+
+    <title>Tweaker.js | Demo</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/bradherman/tweaker.js">View on GitHub</a>
+
+          <h1 id="project_title">Tweaker.js</h1>
+          <h2 id="project_tagline">tweaker is a super simple plugin for inline editing in your web app</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/bradherman/tweaker.js/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/bradherman/tweaker.js/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h1>Demo</h1>
+
+        <button class=".edit">Edit</button>
+        <button class=".finish">Finish</button>
+
+        <h2>This is a non-editable h2</h2>
+        <a href="#">This is a non-editable link</a>
+        <p>This is a non-editable paragraph</p>
+
+        <h2 class="editable">This is an editable h2</h2>
+        <a class="editable" href="#">This is an editable link</a>
+        <p class="editable">This is an editable paragraph.  Click the "edit" button above to initialize.</p>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Tweaker.js maintained by <a href="https://github.com/bradherman">bradherman</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+
+
+  </body>
+</html>
