@@ -15,7 +15,7 @@ Require jQuery, require tweaker.js
         $(".editable").tweaker({method: "post", action: "/page/1/edit"});
       });
       $("button.finish").live("click", function(){
-        $(".editable").tweaker().destroy();
+        $(".editable").data("tweaker").destroy();
       });
     });
     
