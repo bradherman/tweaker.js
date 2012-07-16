@@ -68,7 +68,7 @@
         });
 
         $(".finish").live("click", function(){
-          $(".editable").tweaker().destroy();
+          $(".editable").data("tweaker").destroy();
           $(".edit").show();
           $(".finish").hide();
         });
