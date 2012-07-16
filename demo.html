@@ -71,7 +71,9 @@
         });
 
         $(".finish").live("click", function(){
-          $(".editable").data("tweaker").destroy();
+          $(".editable").each(function(){
+            $(this).data("tweaker").destroy();
+          });
           $(".edit").show();
           $(".finish").hide();
         });
