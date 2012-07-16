@@ -42,7 +42,8 @@
   <span class="nx">$</span><span class="p">(</span><span class="s2">".editable"</span><span class="p">).</span><span class="nx">tweaker</span><span class="p">({</span><span class="nx">method</span><span class="o">:</span> <span class="s2">"post"</span><span class="p">,</span> <span class="nx">action</span><span class="o">:</span> <span class="s2">"/users/1/edit"</span><span class="p">});</span>
   <span class="c1">// method defaults to post, action to the current url</span>
   <span class="nx">$</span><span class="p">(</span><span class="s2">".finish"</span><span class="p">).</span><span class="nx">live</span><span class="p">(</span><span class="s2">"click"</span><span class="p">,</span> <span class="kd">function</span><span class="p">(){</span>
-    <span class="nx">$</span><span class="p">(</span><span class="s2">".editable"</span><span class="p">).</span><span class="nx">tweaker</span><span class="p">().</span><span class="nx">destroy</span><span class="p">();</span>
+
+    <span class="nx">$</span><span class="p">(</span><span class="s2">".editable"</span><span class="p">).</span><span class="nx">data</span><span class="p">(</span><span class="s2">"tweaker"</span><span class="p">).</span><span class="nx">destroy</span><span class="p">();</span>
   <span class="p">});</span>
 <span class="p">});</span>
 </pre>
@@ -68,7 +69,6 @@
         <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
       </footer>
     </div>
-
 
 
   </body>
