@@ -106,8 +106,11 @@
               
               $(".tweaker-cancel").live("click", function(){
                 $target = $(this).attr("data-target");
+                console.log($target);
                 $target = $("#"+$target);
-                $target.val($target.attr("data-original"));
+                $orig = $target.attr("data-original");
+                console.log($orig);
+                $target.val($orig);
               });
             }
         }
