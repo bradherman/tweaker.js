@@ -22,3 +22,13 @@ Require jQuery, require tweaker.js
     .........
     
     <h1 class="editable" id="title">My Editable Title</h1>
+    
+To Do
+-----
+
+* Add support for image uploads
+* Clean up code
+* DRY it up
+* More configurable
+* Better CSS selectors
+* Better default behavior for save/cancel buttons
